@@ -2,126 +2,155 @@
 @use '../abstract/mixins';
 
 .cabecalho{
-    @include mixins.container();
-    @include mixins.flex-jc-al(space-between, center);
-    flex-direction: row;
-    background-color: variaveis.$branco;
-    position: fixed;
-    height: 4.4rem;
-    width: 100vw;
-    z-index: 999;
-    
-    img{
-        width: 50px;
-    }
-    .nav_container{
+    .container{
+        @include mixins.flex-jc-al(space-between, center);
+        flex-direction: row;        
+        transition: .5s;
+        position: fixed;
+        height: 4.4rem;
+        width: 100vw;
+        z-index: 999;
+        padding: 0 8%;
 
-        #check-menu{
-            display: none;
+        img{
+            width: 50px;
         }
-        #check-menu:checked ~ .menu_navegacao{
-            right: 0;
-            opacity: 1;
-            box-shadow: -99px 0px 0px #00000050;
-        }
-        .menu_mobile{
-            @include mixins.flex-jc-al(center, center);
-            width: 25px;
-            height: 25px;
-            display: flex;
-            gap: 3px;
+        .nav_container{
 
-            .menubar{
-                width: 20px;
-                height: 2px;
-                display: block;
-                background-color: variaveis.$cor-principal;
-                transition: .7s;
-            }            
-        }
-        .ativa span:nth-child(1){
-            transform: rotate(45deg) translateY(7px);
-        }
-        .ativa span:nth-child(2){
-            transform: translateX( 20px);
-            opacity: 0;
-        }
-        .ativa span:nth-child(3){
-            transform: rotate(-45deg)translateY(-7px);
-        }
-        .menu_navegacao{
+            #check-menu{
+                display: none;
+            }
+            #check-menu:checked ~ .menu_navegacao{
+                right: 0;
+                opacity: 1;
+                box-shadow: -99px 0px 0px #00000050;
+            }
+            .menu_mobile{
+                @include mixins.flex-jc-al(center, center);
+                width: 25px;
+                height: 25px;
+                display: flex;
+                gap: 3px;
 
-            @include mixins.flex-jc-al(center, center);
-            height: calc(100vh - 4.4rem);
-            width: 90vw;
-            top: 4.4rem;
-            right: -100%;
-            opacity: 0;
-            transition: .5s;
-            position: fixed;
-            background-color: variaveis.$cor-principal;
-            text-align: center;
-            padding-top: 1rem;
-            z-index: 9999;
-            
-                .lista_menu_itens{  
-                    border-bottom: 1px solid white;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-                    font-size: .9rem;
-                    font-weight: 300;
+                .menubar{
+                    width: 20px;
+                    height: 2px;
                     display: block;
-                    padding: 1rem;                      
-                    color: variaveis.$branco;          
-                }
-                .whatsapp_bt{
                     background-color: variaveis.$branco;
-                    padding: 1rem;
-                    border-radius: 10px;
-                    color: variaveis.$cor-principal;
-                    margin-top: 2rem;
-                }
-            
+                    transition: .7s;
+                }        
+                .menubar-ativo{
+                    background-color: variaveis.$cor-principal;
+                }    
+            }
+            .ativa .menubar{
+                background-color: variaveis.$cor-principal;
+            }
+            .ativa span:nth-child(1){
+                transform: rotate(45deg) translateY(7px);
+            }
+            .ativa span:nth-child(2){
+                transform: translateX( 20px);
+                opacity: 0;
+            }
+            .ativa span:nth-child(3){
+                transform: rotate(-45deg)translateY(-7px);
+            }
+            .menu_navegacao{
+
+                @include mixins.flex-jc-al(center, center);
+                height: calc(100vh - 4.4rem);
+                width: 90vw;
+                top: 4.4rem;
+                right: -100%;
+                opacity: 0;
+                transition: .5s;
+                position: fixed;
+                background-color: variaveis.$cor-principal;
+                text-align: center;
+                padding-top: 1rem;
+                z-index: 9999;
+                
+                    .lista_menu_itens{  
+                        border-bottom: 1px solid white;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: .9rem;
+                        font-weight: 300;
+                        display: block;
+                        padding: 1rem;                      
+                        color: variaveis.$branco;          
+                    }
+                    .whatsapp_bt{
+                        background-color: variaveis.$branco;
+                        padding: 1rem;
+                        border-radius: 10px;
+                        color: variaveis.$cor-principal;
+                        margin-top: 2rem;
+                    }
+                
+            }
         }
+    }
+    .rolou{
+        padding-top: 0;
+        background-color: variaveis.$branco;
     }
 }
 
 @media screen and (min-width: 668px){
     .cabecalho{
-
-        .nav_container{
-
-            .menu_mobile{
-                display: none;
+        .container{
+            background-color: transparent;
+            padding-top: 2rem;
+            img{
+                width: 75px;
             }
-            .menu_navegacao{                
-                    opacity: 1;
-                    position: initial;
-                    height: auto;
-                    flex-direction: row;
-                    background-color: transparent;
-                    padding-top: 0;
-                    width: auto;
-                ul{
-                    display: flex;
-                    .lista_menu_itens{
-                        color: variaveis.$cor-principal;
-                        font-size: .9rem;
-                        font-weight: 600;
+            .nav_container{
 
+                .menu_mobile{
+                    display: none;
+                }
+                .menu_navegacao{                
+                        opacity: 1;
+                        position: initial;
+                        height: auto;
+                        flex-direction: row;
+                        background-color: transparent;
+                        padding-top: 0;
+                        width: auto;
+                        ul{
+                            display: flex;
+                            .lista_menu_itens{
+                                color: variaveis.$branco;
+                                font-size: .9rem;
+                                font-weight: 600;
+                                border: none;
+                                
+                                &:hover{
+                                    color: variaveis.$cor-secundaria;
+                                }
+                            }                                        
+                            .item-scroll{
+                                color: variaveis.$cor-principal;
+                            }
+                        }
+                
+                    .whatsapp_bt{
+                        background-color: variaveis.$verde;
+                        margin: 0;
+                        padding: .5rem;
+                        color: variaveis.$branco;
+                        font-size: .8rem;
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
                     }
-                    
-                    
-                }
             
-                .whatsapp_bt{
-                    margin: 0;
-                    padding: .5rem;
-                    color: variaveis.$branco;
-                    font-size: .7rem;
                 }
-        
             }
         }
+
+        
     }
 }

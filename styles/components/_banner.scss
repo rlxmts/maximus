@@ -3,13 +3,12 @@
 
 .banner{
     @include mixins.flex-jc-al(center, start);
-    @include mixins.container();
     height: 100vh;
     background-image: url('../../img/banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: relative; 
 
     &::after{
         content: '';
@@ -20,56 +19,63 @@
         top: 0;
         left: 0;
     }
-
-    h1{
-        @include mixins.textos(variaveis.$branco);
-        animation: entrada 1s;
-    }
-    h3{
-        @include mixins.titulo(variaveis.$branco);
-        margin: 1rem 0;
-        animation: entrada 1s;
-        animation-delay: .3s;
-    }
-
-    .container_bt{
-        animation: entrada 1s;
-        animation-delay: .5s;
-        @include mixins.flex-jc-al(normal, center);
-        flex-direction: row;
-        gap: 1rem;
+    .container{
+        @include mixins.container();
         z-index: 9;
-        button{
-            color: variaveis.$cor-principal;
-            background-color: variaveis.$branco;
-            padding: .6rem 1rem;
-            border-radius: 10px;
+        h1{
+            @include mixins.textos(variaveis.$branco);
+            animation: entrada 1s;
         }
-        .bt_banner:nth-child(2){
-            background-color: variaveis.$cor-principal;
-            color: variaveis.$branco;
-            animation: botao 2s infinite;
+        h3{
+            @include mixins.titulo(variaveis.$branco);
+            margin: 1rem 0;
+            animation: entrada 1s;
+            animation-delay: .3s;
+        }
+
+        .container_bt{
+            animation: entrada 1s;
+            animation-delay: .5s;
+            @include mixins.flex-jc-al(normal, center);
+            flex-direction: row;
+            gap: 1rem;
+            z-index: 9;
+            button{
+                color: variaveis.$cor-principal;
+                background-color: variaveis.$branco;
+                padding: .6rem 1rem;
+                border-radius: 10px;
+            }
+            .bt_banner:nth-child(2){
+                background-color: variaveis.$cor-principal;
+                color: variaveis.$branco;
+                animation: botao 2s infinite;
+            }
+        }
+        @keyframes entrada {
+            0%{
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            100%{
+                opacity: 1;
+                transform: (0);
+            }
+        }
+        @keyframes botao {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.03);
+            }
+            100%{
+                transform: scale(1);
+            }
         }
     }
-    @keyframes entrada {
-        0%{
-            opacity: 0;
-            transform: translateX(-100px);
-        }
-        100%{
-            opacity: 1;
-            transform: (0);
-        }
-    }
-    @keyframes botao {
-        0%{
-            transform: scale(1);
-        }
-        50%{
-            transform: scale(1.02);
-        }
-        100%{
-            transform: scale(1);
-        }
-    }
+}
+
+@media screen and (min-width: 668) {
+    
 }
