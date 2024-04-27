@@ -14,7 +14,7 @@
 
 @mixin titulo($cor){
     z-index: 9;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: variaveis.$font-titulo;
     line-height: 3rem;
     color: $cor;
