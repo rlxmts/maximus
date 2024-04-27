@@ -5,7 +5,9 @@ const barrinhasMenu = document.querySelectorAll('.menubar');
 btMenu.addEventListener('click', ()=> {
     btMenu.classList.toggle('ativa');
     if(!cabecalho.classList.contains('rolou')){
-        cabecalho.classList.toggle('rolou');
+        cabecalho.classList.toggle('rolou-top');
+    }else{
+        cabecalho.classList.remove('rolou-top');
     }
 })
 

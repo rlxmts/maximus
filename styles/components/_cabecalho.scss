@@ -96,13 +96,16 @@
         padding-top: 0;
         background-color: variaveis.$branco;
     }
+    .rolou-top{
+        padding-top: 0;
+        background-color: variaveis.$branco;
+    }
 }
 
 @media screen and (min-width: 668px){
     .cabecalho{
         .container{
-            background-color: transparent;
-            padding-top: 2rem;
+            
             img{
                 width: 75px;
             }

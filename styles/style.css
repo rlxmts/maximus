@@ -108,12 +108,12 @@ img {
   padding-top: 0;
   background-color: #FFFFFF;
 }
+.cabecalho .rolou-top {
+  padding-top: 0;
+  background-color: #FFFFFF;
+}
 
 @media screen and (min-width: 668px) {
-  .cabecalho .container {
-    background-color: transparent;
-    padding-top: 2rem;
-  }
   .cabecalho .container img {
     width: 75px;
   }
