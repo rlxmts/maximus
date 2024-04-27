@@ -1,0 +1,31 @@
+@use './variaveis';
+
+@mixin flex-jc-al($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: column;
+}
+
+@mixin container{
+    max-width: 1200px;
+    padding: 0 8%;
+}
+
+@mixin titulo($cor){
+    z-index: 9;
+    font-size: 2rem;
+    font-family: variaveis.$font-titulo;
+    line-height: 2.3rem;
+    color: $cor;
+    font-weight: 400;
+}
+
+@mixin textos($cor){
+    z-index: 9;
+    font-family: variaveis.$font-textos;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: $cor;
+}
