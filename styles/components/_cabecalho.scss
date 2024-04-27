@@ -59,27 +59,29 @@
             opacity: 0;
             transition: .5s;
             position: fixed;
-            background-color: variaveis.$cinza-escuro;
+            background-color: variaveis.$cor-principal;
             text-align: center;
             padding-top: 1rem;
             z-index: 9999;
             
-            .lista_menu_itens{  
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                font-size: 1rem;
-                font-weight: 300;
-                display: block;
-                padding: 1rem;                      
-                color: variaveis.$branco;          
-            }
-            .whatsapp_bt{
-                background-color: variaveis.$verde;
-                padding: 1rem;
-                border-radius: 10px;
-                color: variaveis.$branco;
-                margin-top: 2rem;
-            }
+                .lista_menu_itens{  
+                    border-bottom: 1px solid white;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: .9rem;
+                    font-weight: 300;
+                    display: block;
+                    padding: 1rem;                      
+                    color: variaveis.$branco;          
+                }
+                .whatsapp_bt{
+                    background-color: variaveis.$branco;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    color: variaveis.$cor-principal;
+                    margin-top: 2rem;
+                }
+            
         }
     }
 }

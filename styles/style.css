@@ -77,25 +77,26 @@ img {
   opacity: 0;
   transition: 0.5s;
   position: fixed;
-  background-color: #333333;
+  background-color: #1A385B;
   text-align: center;
   padding-top: 1rem;
   z-index: 9999;
 }
 .cabecalho .nav_container .menu_navegacao .lista_menu_itens {
+  border-bottom: 1px solid white;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 1rem;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
   font-weight: 300;
   display: block;
   padding: 1rem;
   color: #FFFFFF;
 }
 .cabecalho .nav_container .menu_navegacao .whatsapp_bt {
-  background-color: #2d7e18;
+  background-color: #FFFFFF;
   padding: 1rem;
   border-radius: 10px;
-  color: #FFFFFF;
+  color: #1A385B;
   margin-top: 2rem;
 }
 
@@ -150,7 +151,7 @@ img {
   top: 0;
   left: 0;
 }
-.banner h1, .banner h3 {
+.banner h1 {
   z-index: 9;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -158,7 +159,7 @@ img {
   letter-spacing: 2px;
   color: #FFFFFF;
 }
-.banner h5 {
+.banner h3 {
   z-index: 9;
   font-size: 3rem;
   font-family: "Montserrat", sans-serif;

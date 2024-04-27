@@ -25,9 +25,6 @@
         @include mixins.textos(variaveis.$branco);
     }
     h3{
-        @extend h1;
-    }
-    h5{
         @include mixins.titulo(variaveis.$branco);
         margin: 1rem 0;
     }
