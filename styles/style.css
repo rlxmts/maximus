@@ -191,6 +191,7 @@ img {
 .banner .container_bt .bt_banner:nth-child(2) {
   background-color: #1A385B;
   color: #FFFFFF;
+  animation: botao 2s infinite;
 }
 @keyframes entrada {
   0% {
@@ -200,5 +201,16 @@ img {
   100% {
     opacity: 1;
     transform: 0;
+  }
+}
+@keyframes botao {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=style.css.map */
