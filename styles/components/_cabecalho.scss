@@ -19,6 +19,8 @@
         }
         #check-menu:checked ~ .menu_navegacao{
             right: 0;
+            opacity: 1;
+            box-shadow: -99px 0px 0px #00000050;
         }
         .menu_mobile{
             width: 25px;
@@ -47,12 +49,13 @@
             transform: rotate(-45deg)translateY(-7px);
         }
         .menu_navegacao{
-            transition: .5s;
+            opacity: 0;
+            transition: 1s;
             position: fixed;
             top: 4.4rem;
             right: -100%;
             background-color: variaveis.$cinza-escuro;
-            height: 100vh;
+            height: calc(100vh - 4.4rem);
             width: 90vw;
             z-index: 9999;
             text-align: center;
@@ -60,7 +63,7 @@
             flex-direction: column;
             align-items: center;
             padding-top: 1rem;
-
+            justify-content: center;
             .lista_menu_itens{  
                 text-transform: uppercase;
                 letter-spacing: 3px;
