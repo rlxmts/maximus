@@ -146,7 +146,7 @@ img {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3333333333);
+  background-color: rgba(0, 0, 0, 0.5254901961);
   top: 0;
   left: 0;
 }
@@ -154,13 +154,13 @@ img {
   z-index: 9;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 2px;
   color: #FFFFFF;
 }
 .banner h5 {
   z-index: 9;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-family: "Montserrat", sans-serif;
   line-height: 2.3rem;
   color: #FFFFFF;
