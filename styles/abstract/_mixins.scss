@@ -14,12 +14,11 @@
 
 @mixin titulo($cor){
     z-index: 9;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: variaveis.$font-titulo;
     line-height: 3rem;
-    letter-spacing: 3px;
     color: $cor;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 @mixin textos($cor){
