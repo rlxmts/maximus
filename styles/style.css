@@ -158,6 +158,7 @@ img {
   font-weight: 400;
   letter-spacing: 2px;
   color: #FFFFFF;
+  animation: entrada 1s;
 }
 .banner h3 {
   z-index: 9;
@@ -167,8 +168,12 @@ img {
   color: #FFFFFF;
   font-weight: 300;
   margin: 1rem 0;
+  animation: entrada 1s;
+  animation-delay: 0.3s;
 }
 .banner .container_bt {
+  animation: entrada 1s;
+  animation-delay: 0.5s;
   display: flex;
   justify-content: normal;
   align-items: center;
@@ -186,4 +191,14 @@ img {
 .banner .container_bt .bt_banner:nth-child(2) {
   background-color: #1A385B;
   color: #FFFFFF;
+}
+@keyframes entrada {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -23,13 +23,18 @@
 
     h1{
         @include mixins.textos(variaveis.$branco);
+        animation: entrada 1s;
     }
     h3{
         @include mixins.titulo(variaveis.$branco);
         margin: 1rem 0;
+        animation: entrada 1s;
+        animation-delay: .3s;
     }
 
     .container_bt{
+        animation: entrada 1s;
+        animation-delay: .5s;
         @include mixins.flex-jc-al(normal, center);
         flex-direction: row;
         gap: 1rem;
@@ -43,6 +48,16 @@
         .bt_banner:nth-child(2){
             background-color: variaveis.$cor-principal;
             color: variaveis.$branco;
+        }
+    }
+    @keyframes entrada {
+        0%{
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        100%{
+            opacity: 1;
+            transform: (0);
         }
     }
 }
