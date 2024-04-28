@@ -302,10 +302,10 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   margin-top: 1rem;
-  flex-direction: row;
+  flex-direction: row-reverse;
   margin-bottom: 2rem;
 }
 .sobre .container ul li {
@@ -315,7 +315,19 @@ img {
   font-weight: 400;
   color: #1A385B;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.sobre .container ul li::before {
+  content: "";
+  height: 3px;
+  width: 3px;
+  position: absolute;
+  background-color: #1A385B;
+  left: -10px;
+  bottom: 8px;
+  border-radius: 50%;
 }
 .sobre img {
   width: 100%;

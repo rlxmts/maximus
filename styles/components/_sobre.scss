@@ -25,15 +25,28 @@
         }
         ul{
             @include mixins.flex-jc-al(space-between, center);
-            gap: 2rem;
+            gap: 1rem;
             width: 100%;
             margin-top: 1rem;
-            flex-direction: row;
+            flex-direction: row-reverse;
             margin-bottom: 2rem;
             li{
                 @include mixins.textos(variaveis.$cor-principal);
                 font-weight: 400;
-                font-size: 1.3rem;
+                font-size: 1rem;
+                text-transform: uppercase;
+                position: relative;
+                
+                &::before{
+                    content: '';
+                    height: 3px;
+                    width: 3px;
+                    position: absolute;
+                    background-color: variaveis.$cor-principal;
+                    left: -10px;
+                    bottom: 8px;
+                    border-radius: 50%;
+                }
             }
         }
     }
