@@ -5,12 +5,10 @@
     @include mixins.container();
     .container{
         @include mixins.flex-jc-al(normal, start);
-        gap: 2rem;
 
         div{
             @include mixins.flex-jc-al(normal, start);
             gap: 1rem;
-            padding-top: 2rem;
 
             h2{
                 @include mixins.titulo(variaveis.$cor-principal);
@@ -20,5 +18,25 @@
                 @include mixins.textos(variaveis.$cinza-escuro);
             }
         }
+        h3{
+            @include mixins.titulo(variaveis.$cor-principal);
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+        ul{
+            @include mixins.flex-jc-al(normal, center);
+            gap: 2rem;
+            width: 100%;
+            margin-top: 1rem;
+            flex-direction: row;
+            margin-bottom: 2rem;
+            li{
+                @include mixins.textos(variaveis.$cinza-escuro);
+                font-weight: 500;
+            }
+        }
+    }
+    img{
+        width: 100%;
     }
 }
