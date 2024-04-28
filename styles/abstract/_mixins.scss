@@ -25,8 +25,8 @@
 @mixin textos($cor){
     z-index: 9;
     font-family: variaveis.$font-textos;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
-    letter-spacing: 2px;
+    //letter-spacing: 2px;
     color: $cor;
 }
