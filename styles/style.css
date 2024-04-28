@@ -107,6 +107,7 @@ img {
 .cabecalho .rolou {
   padding-top: 0;
   background-color: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4352941176);
 }
 .cabecalho .rolou-top {
   padding-top: 0;
@@ -178,10 +179,9 @@ img {
 }
 .banner .container {
   max-width: 1200px;
-  padding: 0 8%;
   margin: 0 auto;
+  padding: 0 1rem;
   z-index: 9;
-  margin: 0;
 }
 .banner .container h1 {
   z-index: 9;
@@ -254,15 +254,15 @@ img {
 }
 .sobre {
   max-width: 1200px;
-  padding: 0 8%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 .sobre .container {
   display: flex;
   justify-content: normal;
   align-items: start;
   flex-direction: column;
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 .sobre .container div {
   display: flex;
@@ -288,6 +288,7 @@ img {
   color: #333333;
 }
 .sobre .container h3 {
+  margin-top: 5rem;
   z-index: 9;
   font-size: 3rem;
   font-family: "Montserrat", sans-serif;
@@ -295,17 +296,16 @@ img {
   color: #1A385B;
   font-weight: 300;
   font-size: 2rem;
-  margin-top: 2rem;
 }
 .sobre .container ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: normal;
   align-items: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
   width: 100%;
-  margin-top: 1rem;
-  flex-direction: row-reverse;
+  margin: 1rem 0 0 1rem;
+  flex-direction: row;
   margin-bottom: 2rem;
 }
 .sobre .container ul li {
@@ -321,14 +321,39 @@ img {
 }
 .sobre .container ul li::before {
   content: "";
-  height: 3px;
-  width: 3px;
+  height: 10px;
+  width: 10px;
   position: absolute;
-  background-color: #1A385B;
-  left: -10px;
-  bottom: 8px;
+  background-image: url("../../img/barra.png");
+  background-size: 10px;
+  background-position: center;
+  left: -14px;
+  bottom: 5px;
   border-radius: 50%;
 }
 .sobre img {
   width: 100%;
+}
+
+@media screen and (min-width: 668px) {
+  .sobre {
+    padding-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+  }
+  .sobre .container {
+    width: 45%;
+    margin-top: 0;
+  }
+  .sobre .container ul {
+    gap: 4rem;
+  }
+  .sobre img {
+    width: 45%;
+  }
 }/*# sourceMappingURL=style.css.map */

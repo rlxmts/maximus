@@ -22,7 +22,6 @@
     .container{
         @include mixins.container();
         z-index: 9;
-        margin: 0;
         h1{
             @include mixins.textos(variaveis.$branco);
             animation: entrada 1s;

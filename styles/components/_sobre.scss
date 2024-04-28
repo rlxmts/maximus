@@ -5,7 +5,7 @@
     @include mixins.container();
     .container{
         @include mixins.flex-jc-al(normal, start);
-        margin-top: 7rem;
+        margin-top: 5rem;
 
         div{
             @include mixins.flex-jc-al(normal, start);
@@ -19,16 +19,16 @@
             }
         }
         h3{
+            margin-top: 5rem;
             @include mixins.titulo(variaveis.$cor-principal);
             font-size: 2rem;
-            margin-top: 2rem;
         }
         ul{
-            @include mixins.flex-jc-al(space-between, center);
-            gap: 1rem;
+            @include mixins.flex-jc-al(normal, center);
+            gap: 3rem;
             width: 100%;
-            margin-top: 1rem;
-            flex-direction: row-reverse;
+            margin: 1rem 0 0 1rem;
+            flex-direction: row;
             margin-bottom: 2rem;
             li{
                 @include mixins.textos(variaveis.$cor-principal);
@@ -39,12 +39,14 @@
                 
                 &::before{
                     content: '';
-                    height: 3px;
-                    width: 3px;
+                    height: 10px;
+                    width: 10px;
                     position: absolute;
-                    background-color: variaveis.$cor-principal;
-                    left: -10px;
-                    bottom: 8px;
+                    background-image: url('../../img/barra.png');
+                    background-size: 10px;
+                    background-position: center;
+                    left: -14px;
+                    bottom: 5px;
                     border-radius: 50%;
                 }
             }
@@ -52,5 +54,25 @@
     }
     img{
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 668px) {
+    .sobre {
+        padding-top: 6rem;
+        @include mixins.flex-jc-al(space-between, start);
+        flex-direction: row;
+        gap: 3rem;
+        width: 100%;
+        .container{
+            width: 45%;
+            margin-top: 0;
+            ul{
+                gap: 4rem;
+            }
+        }
+        img{
+            width: 45%;
+        }
     }
 }
