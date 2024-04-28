@@ -22,6 +22,7 @@
     .container{
         @include mixins.container();
         z-index: 9;
+        margin: 0;
         h1{
             @include mixins.textos(variaveis.$branco);
             animation: entrada 1s;
@@ -76,6 +77,13 @@
     }
 }
 
-@media screen and (min-width: 668) {
-    
+@media screen and (min-width: 668px) {
+    .banner{
+        .container{
+            h3{
+                font-size: 5rem;
+                line-height: 4.5rem;
+            }
+        }
+    }
 }

@@ -181,6 +181,7 @@ img {
   padding: 0 8%;
   margin: 0 auto;
   z-index: 9;
+  margin: 0;
 }
 .banner .container h1 {
   z-index: 9;
@@ -244,4 +245,48 @@ img {
   100% {
     transform: scale(1);
   }
+}
+
+@media screen and (min-width: 668px) {
+  .banner .container h3 {
+    font-size: 5rem;
+    line-height: 4.5rem;
+  }
+}
+.sobre {
+  max-width: 1200px;
+  padding: 0 8%;
+  margin: 0 auto;
+}
+.sobre .container {
+  display: flex;
+  justify-content: normal;
+  align-items: start;
+  flex-direction: column;
+  gap: 2rem;
+}
+.sobre .container div {
+  display: flex;
+  justify-content: normal;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+.sobre .container div h2 {
+  z-index: 9;
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 3rem;
+  color: #1A385B;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.sobre .container div p {
+  z-index: 9;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #333333;
 }/*# sourceMappingURL=style.css.map */

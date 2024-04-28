@@ -1,0 +1,24 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.sobre{
+    @include mixins.container();
+    .container{
+        @include mixins.flex-jc-al(normal, start);
+        gap: 2rem;
+
+        div{
+            @include mixins.flex-jc-al(normal, start);
+            gap: 1rem;
+            padding-top: 2rem;
+
+            h2{
+                @include mixins.titulo(variaveis.$cor-principal);
+                font-size: 2rem;
+            }
+            p{
+                @include mixins.textos(variaveis.$cinza-escuro);
+            }
+        }
+    }
+}
