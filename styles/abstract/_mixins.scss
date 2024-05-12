@@ -1,32 +1,38 @@
 @use './variaveis';
 
-@mixin flex-jc-al($justify, $align){
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: column;
+@mixin container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 5%;
 }
 
-@mixin container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+@mixin flex{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 
 @mixin titulo($cor){
-    z-index: 9;
-    font-size: 3rem;
-    font-family: variaveis.$font-titulo;
-    line-height: 3rem;
+    font-size: 4rem;
+    font-family: variaveis.$font-titulos;
     color: $cor;
-    font-weight: 300;
+    font-weight: 600;
+}
+@mixin subtitulo($cor){
+    font-size: 1.2rem;
+    font-family: variaveis.$font-titulos;
+    color: $cor;
+    letter-spacing: 2px;
 }
 
-@mixin textos($cor){
-    z-index: 9;
-    font-family: variaveis.$font-textos;
-    font-size: 1.2rem;
-    font-weight: 400;
-    //letter-spacing: 2px;
-    color: $cor;
+@mixin botao{
+    background-color: variaveis.$verde-escuro;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .6s;
 }

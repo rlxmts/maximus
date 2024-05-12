@@ -1,88 +1,80 @@
 @use '../abstract/variaveis';
 @use '../abstract/mixins';
-
-.banner{
-    @include mixins.flex-jc-al(center, start);
-    height: 100vh;
-    background-image: url('../../img/banner.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative; 
-
-    &::after{
-        content: '';
+   
+.banner {
+        background-image: url('../../img/banner.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 100%;
-        height: 100%;
-        position: absolute;
-        background-color: #00000086;
+        height: 100vh;
         top: 0;
-        left: 0;
-    }
-    .container{
-        @include mixins.container();
-        z-index: 9;
-        h1{
-            @include mixins.textos(variaveis.$branco);
-            animation: entrada 1s;
-        }
-        h3{
-            @include mixins.titulo(variaveis.$branco);
-            margin: 1rem 0;
-            animation: entrada 1s;
-            animation-delay: .3s;
+        &::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: rgb(0,0,0);
+            position: absolute; 
+            top: 0;
+            left: 0;
+            opacity: .3 ;
         }
 
-        .container_bt{
-            animation: entrada 1s;
-            animation-delay: .5s;
-            @include mixins.flex-jc-al(normal, center);
-            flex-direction: row;
-            gap: 1rem;
-            z-index: 9;
-            button{
-                color: variaveis.$cor-principal;
-                background-color: variaveis.$branco;
-                padding: .6rem 1rem;
-                border-radius: 10px;
-            }
-            .bt_banner:nth-child(2){
-                background-color: variaveis.$cor-principal;
-                color: variaveis.$branco;
-                animation: botao 2s infinite;
-            }
-        }
-        @keyframes entrada {
-            0%{
-                opacity: 0;
-                transform: translateX(-100px);
-            }
-            100%{
-                opacity: 1;
-                transform: (0);
-            }
-        }
-        @keyframes botao {
-            0%{
-                transform: scale(1);
-            }
-            50%{
-                transform: scale(1.03);
-            }
-            100%{
-                transform: scale(1);
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 668px) {
-    .banner{
         .container{
+            @include mixins.container();
+            position: relative;
+            z-index: 999;
+            @include mixins.flex();
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: start;
+            height: 100%;
+            padding-bottom: 250px;
+            gap: 0;
+            h1{
+                @include mixins.subtitulo(white);
+                animation: entrando 1s;
+            }
             h3{
+                @include mixins.titulo(white);
+                max-width: 800px;
                 font-size: 5rem;
-                line-height: 4.5rem;
+                margin-bottom: 3rem;
+                animation: entrando 1s;
+            };
+            button:nth-child(1){
+                @include mixins.botao();
+                margin-right: 15px;
+                animation: entrando 1.5s;
+
+                &:hover{
+                    background-color: variaveis.$amarelo;
+                    color: variaveis.$verde-escuro;
+                }
+            }
+            button:nth-child(2){
+                @include mixins.botao();
+                background-color: variaveis.$amarelo;
+                color: variaveis.$verde-escuro;
+                animation: entrando 2s;
+
+                &:hover{
+                    background-color: variaveis.$verde-escuro;
+                    color: white;
+                }
+            }
+
+            @keyframes entrando {
+                0%{
+                    transform: translateY(30px);
+                    opacity: 0;
+                }
+                100%{
+                    transform: translateX(0);
+                    opacity: 1;
+                }
             }
         }
     }
-}
+

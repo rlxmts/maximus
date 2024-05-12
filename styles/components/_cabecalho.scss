@@ -2,159 +2,103 @@
 @use '../abstract/mixins';
 
 .cabecalho{
-    .container{
-        @include mixins.flex-jc-al(space-between, center);
-        flex-direction: row;        
-        transition: .5s;
-        position: fixed;
-        height: 4.4rem;
-        width: 100vw;
-        z-index: 999;
-        padding: 0 8%;
+    position: fixed;
+    width: 100%;
+    z-index: 9999999;
+  .container{
+    @include mixins.container();
+    @include mixins.flex();
+    justify-content: space-between;
+  } 
+  img{
+    width: 120px;
+  }
+  .nav_container{    
 
-        img{
-            width: 50px;
-        }
-        .nav_container{
-
-            #check-menu{
-                display: none;
-            }
-            #check-menu:checked ~ .menu_navegacao{
-                right: 0;
-                opacity: 1;
-                box-shadow: -99px 0px 0px #00000050;
-            }
-            .menu_mobile{
-                @include mixins.flex-jc-al(center, center);
-                width: 25px;
-                height: 25px;
-                display: flex;
-                gap: 3px;
-
-                .menubar{
-                    width: 20px;
-                    height: 2px;
-                    display: block;
-                    background-color: variaveis.$branco;
-                    transition: .7s;
-                }        
-                .menubar-ativo{
-                    background-color: variaveis.$cor-principal;
-                }    
-            }
-            .ativa .menubar{
-                background-color: variaveis.$cor-principal;
-            }
-            .ativa span:nth-child(1){
-                transform: rotate(45deg) translateY(7px);
-            }
-            .ativa span:nth-child(2){
-                transform: translateX( 20px);
-                opacity: 0;
-            }
-            .ativa span:nth-child(3){
-                transform: rotate(-45deg)translateY(-7px);
-            }
-            .menu_navegacao{
-
-                @include mixins.flex-jc-al(center, center);
-                height: calc(100vh - 4.4rem);
-                width: 90vw;
-                top: 4.4rem;
-                right: -100%;
-                opacity: 0;
-                transition: .5s;
-                position: fixed;
-                background-color: variaveis.$cor-principal;
-                text-align: center;
-                padding-top: 1rem;
-                z-index: 9999;
-                
-                    .lista_menu_itens{  
-                        border-bottom: 1px solid white;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        font-size: .9rem;
-                        font-weight: 300;
-                        display: block;
-                        padding: 1rem;                      
-                        color: variaveis.$branco;          
-                    }
-                    .whatsapp_bt{
-                        background-color: variaveis.$branco;
-                        padding: 1rem;
-                        border-radius: 10px;
-                        color: variaveis.$cor-principal;
-                        margin-top: 2rem;
-                    }
-                
-            }
+    #check-menu{
+        display: none;
+    }
+    label{
+        display: none;
+    }
+    .menu_mobile{
+        @include mixins.flex();
+        gap: 3px;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        span{
+            transition: 1s ;
+            width: 20px;
+            height: 2px;
+            display: block;
+            background-color: black;
         }
     }
-    .rolou{
-        padding-top: 0;
-        background-color: variaveis.$branco;
-        box-shadow: 0px 0px 4px #0000006f;
-    }
-    .rolou-top{
-        padding-top: 0;
-        background-color: variaveis.$branco;
+        .ativo span:nth-child(1){
+            animation: ativandoPrimeiro 1s;
+            transform: rotate(-45deg) translateY(7px);        
+        }
+        .ativo span:nth-child(2){
+            transform: translateX( 60px);
+            opacity: 0;
+
+        }
+        .ativo span:nth-child(3){
+            animation: ativandoSegundo 1s;
+            transform: rotate(45deg) translateY(-7px);
+        }
+        @keyframes ativandoPrimeiro {
+            0%{
+                transform: rotate(0) translateY(0);
+            }
+            50%{
+                transform: rotate(0) translateY(5px);
+            }
+            100%{
+                transform: rotate(-45deg) translateY(7px);
+            }
+        }
+        @keyframes ativandoSegundo {
+            0%{
+                transform: rotate(0) translateY(0);
+            }
+            50%{
+                transform: rotate(0) translateY(-5px);
+            }
+            100%{
+                transform: rotate(45deg) translateY(-7px);
+            }
+        }
+
+        .menu_navegacao{
+            @include mixins.flex();
+            ul{
+                @include mixins.flex();
+
+                li{
+                    a{
+                        font-weight: 600;
+                        color: white;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .whatsapp_bt{
+                @include mixins.botao();
+                padding: .5rem 1rem;
+            }
+            .bt-ativo{
+                background-color: white;
+                color: variaveis.$verde-escuro;
+            }
+        }
     }
 }
 
-@media screen and (min-width: 668px){
-    .cabecalho{
-        .container{
-            
-            img{
-                width: 75px;
-            }
-            .nav_container{
+.cabecalho-ativo {
+    transition: 1s  ;
+    background-color: variaveis.$verde-escuro;
+    box-shadow: 0px 0px 5px #000;
 
-                .menu_mobile{
-                    display: none;
-                }
-                .menu_navegacao{                
-                        opacity: 1;
-                        position: initial;
-                        height: auto;
-                        flex-direction: row;
-                        background-color: transparent;
-                        padding-top: 0;
-                        width: auto;
-                        ul{
-                            display: flex;
-                            .lista_menu_itens{
-                                color: variaveis.$branco;
-                                font-size: .9rem;
-                                font-weight: 600;
-                                border: none;
-                                
-                                &:hover{
-                                    color: variaveis.$cor-secundaria;
-                                }
-                            }                                        
-                            .item-scroll{
-                                color: variaveis.$cor-principal;
-                            }
-                        }
-                
-                    .whatsapp_bt{
-                        background-color: variaveis.$verde;
-                        margin: 0;
-                        padding: .5rem;
-                        color: variaveis.$branco;
-                        font-size: .8rem;
-                        font-weight: 500;
-                        letter-spacing: 2px;
-                        text-transform: uppercase;
-                    }
-            
-                }
-            }
-        }
-
-        
-    }
 }

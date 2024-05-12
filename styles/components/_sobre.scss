@@ -1,78 +1,97 @@
 @use '../abstract/variaveis';
 @use '../abstract/mixins';
 
-.sobre{
+.sobre {
     @include mixins.container();
-    .container{
-        @include mixins.flex-jc-al(normal, start);
-        margin-top: 5rem;
+    @include mixins.flex();
+    padding-top: 10rem;
+    gap: 3rem;
+    justify-content: center;
 
+    .container{
+        @include mixins.flex();
+        flex-direction: column;
+        align-items: start;
+        gap: 3rem;
         div{
-            @include mixins.flex-jc-al(normal, start);
-            gap: 1rem;
             h2{
-                @include mixins.titulo(variaveis.$cor-principal);
-                font-size: 2rem;
+                @include mixins.titulo(variaveis.$verde-escuro);
             }
             p{
-                @include mixins.textos(variaveis.$cinza-escuro);
+                line-height: 1.9rem;
+                font-size: 15px;
             }
         }
         h3{
-            margin-top: 5rem;
-            @include mixins.titulo(variaveis.$cor-principal);
-            font-size: 2rem;
+            @include mixins.subtitulo(variaveis.$verde-escuro);
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: -2rem;
         }
         ul{
-            @include mixins.flex-jc-al(normal, center);
-            gap: 3rem;
+            @include mixins.flex();
             width: 100%;
-            margin: 1rem 0 0 1rem;
-            flex-direction: row;
-            margin-bottom: 2rem;
+            padding-right: 10%;
+            flex-wrap: wrap;
+            
             li{
-                @include mixins.textos(variaveis.$cor-principal);
-                font-weight: 400;
-                font-size: 1rem;
-                text-transform: uppercase;
+                font-size: 1.5rem;
+                padding-left: 20px;
                 position: relative;
-                
+                text-transform: capitalize;
+                margin-bottom: 1rem;
                 &::before{
                     content: '';
-                    height: 10px;
-                    width: 10px;
+                    height: 5px;
+                    width: 5px;
+                    background-color: variaveis.$verde-escuro;
+                    display: block;
                     position: absolute;
-                    background-image: url('../../img/barra.png');
-                    background-size: 10px;
-                    background-position: center;
-                    left: -14px;
-                    bottom: 5px;
                     border-radius: 50%;
+                    left: 5px;
+                    top: 10px;
                 }
             }
         }
+
+    }   
+    @keyframes entrada {
+        0%{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
     }
-    img{
-        width: 100%;
+    .caixa-img{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 100%;
+            min-width: 400px;
+        }
     }
 }
 
-@media screen and (min-width: 668px) {
-    .sobre {
-        padding-top: 6rem;
-        @include mixins.flex-jc-al(space-between, start);
-        flex-direction: row;
-        gap: 3rem;
-        width: 100%;
+@media screen and (max-width: 1024px) {
+    .sobre{
+        flex-wrap: wrap-reverse;
+
         .container{
-            width: 45%;
-            margin-top: 0;
-            ul{
-                gap: 4rem;
+            
+            div{
+                h2{text-align: center;}
             }
-        }
-        img{
-            width: 45%;
+            h3{
+                width: 100%;
+                text-align:  center;
+            }
+            ul{                
+               justify-content: space-around;
+            }
         }
     }
 }
