@@ -1,25 +1,17 @@
-const btMenu = document.querySelector('.menu_mobile');
-const cabecalho = document.querySelector('.cabecalho .container');
-const barrinhasMenu = document.querySelectorAll('.menubar');
+const btMobile = document.querySelector('.menu_mobile');
+const cabecalho = document.querySelector('.cabecalho');
+const btWpp = document.querySelector('.whatsapp_bt');
 
-btMenu.addEventListener('click', ()=> {
-    btMenu.classList.toggle('ativa');
-    if(!cabecalho.classList.contains('rolou')){
-        cabecalho.classList.toggle('rolou-top');
-    }else{
-        cabecalho.classList.remove('rolou-top');
-    }
+btMobile.addEventListener('click', ()=> {
+    btMobile.classList.toggle('ativo');
 })
 
-window.addEventListener('scroll', ()=> {
-    const itens = document.querySelectorAll('.lista_menu_itens'); 
-    cabecalho.classList.toggle('rolou', window.scrollY > 0);
-
-    barrinhasMenu.forEach( barrinha => {
-        barrinha.classList.toggle('menubar-ativo', window.scrollY > 0);
-    })
-
-    itens.forEach( item => {
-        item.classList.toggle('item-scroll', window.scrollY > 0);
-    })
+document.addEventListener('scroll', ()=> {
+    if(scrollY > 10){
+        cabecalho.classList.add('cabecalho-ativo');
+        btWpp.classList.add('bt-ativo');
+    }else{
+        cabecalho.classList.remove('cabecalho-ativo');
+        btWpp.classList.remove('bt-ativo');
+    }
 })
