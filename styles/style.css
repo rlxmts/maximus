@@ -176,7 +176,7 @@
   margin-bottom: 3rem;
   animation: entrando 1s;
 }
-.banner .container button:nth-child(1) {
+.banner .container a:nth-child(1) {
   background-color: #005B41;
   color: white;
   border: none;
@@ -189,11 +189,11 @@
   margin-right: 15px;
   animation: entrando 1.5s;
 }
-.banner .container button:nth-child(1):hover {
+.banner .container a:nth-child(1):hover {
   background-color: #FFD23F;
   color: #005B41;
 }
-.banner .container button:nth-child(2) {
+.banner .container a:nth-child(2) {
   background-color: #005B41;
   color: white;
   border: none;
@@ -207,7 +207,7 @@
   color: #005B41;
   animation: entrando 2s;
 }
-.banner .container button:nth-child(2):hover {
+.banner .container a:nth-child(2):hover {
   background-color: #005B41;
   color: white;
 }
@@ -354,7 +354,7 @@
   align-items: center;
 }
 .servicos .container .lista-servicos li .item-container h4 {
-  color: #1F2544;
+  color: #232D3F;
   font-size: 2.7rem;
   margin-bottom: 2rem;
 }
@@ -408,4 +408,23 @@
   color: white;
   font-weight: 600;
   text-align: center;
+}
+.chamada_container a {
+  background-color: #005B41;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.6s;
+  background-color: white;
+  color: #232D3F;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.chamada_container a:hover {
+  background-color: #232D3F;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

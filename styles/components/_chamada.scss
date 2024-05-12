@@ -19,5 +19,17 @@
             @include mixins.titulo(white);
             text-align: center;
         }
+        a{
+            @include mixins.botao();
+            background-color: white;
+            color: variaveis.$azul-escuro;
+            font-weight: 700;
+            font-size: 1.2rem;
+
+            &:hover{
+                background-color: variaveis.$azul-escuro;
+                color: white;
+            }
+        }
     }
 }

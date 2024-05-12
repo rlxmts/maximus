@@ -43,7 +43,7 @@
                 margin-bottom: 3rem;
                 animation: entrando 1s;
             };
-            button:nth-child(1){
+            a:nth-child(1){
                 @include mixins.botao();
                 margin-right: 15px;
                 animation: entrando 1.5s;
@@ -53,7 +53,7 @@
                     color: variaveis.$verde-escuro;
                 }
             }
-            button:nth-child(2){
+            a:nth-child(2){
                 @include mixins.botao();
                 background-color: variaveis.$amarelo;
                 color: variaveis.$verde-escuro;
