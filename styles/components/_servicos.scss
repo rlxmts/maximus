@@ -1,0 +1,70 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+
+.servicos{
+    background-color: variaveis.$cinza-claro;
+
+    .container{
+
+        @include mixins.container();
+        position: relative;    
+
+        .logo-flutuante{
+            width: 15%;
+            position: absolute;
+            top: -50px;
+            right: 100px;
+            border: none;
+        }
+
+        div{
+            h4{
+                @include mixins.titulo(variaveis.$verde-escuro);
+            }
+            p{
+                @include mixins.textos();
+                max-width: 700px;
+                margin-bottom: 4rem;
+            }
+        }
+
+        .lista-servicos{
+            
+            li{
+                @include mixins.flex();
+                .item-container{
+                    h4{
+                        color: variaveis.$azul-escuro;
+                        font-size: 2.7rem;
+                        margin-bottom: 2rem;
+                    }
+                    p{
+                        line-height: 1.7rem;
+                    }
+                }
+                .img-servicos{
+                    width: 50%;
+                }
+            }
+            li:nth-child(1){
+                flex-direction: row-reverse;
+                background-color: white;
+            }
+            li:nth-child(4){
+                flex-direction: row-reverse;
+                background-color: white;
+            }
+            li:nth-child(6){
+                flex-direction: row-reverse;
+                background-color: white;
+            }
+            li:nth-child(8){
+                flex-direction: row-reverse;
+                background-color: white;
+            }
+        }
+
+        
+    }
+}

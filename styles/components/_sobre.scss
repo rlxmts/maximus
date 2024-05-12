@@ -4,7 +4,7 @@
 .sobre {
     @include mixins.container();
     @include mixins.flex();
-    padding-top: 10rem;
+    
     gap: 3rem;
     justify-content: center;
 

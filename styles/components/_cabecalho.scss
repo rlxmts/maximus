@@ -7,6 +7,8 @@
     z-index: 9999999;
   .container{
     @include mixins.container();
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @include mixins.flex();
     justify-content: space-between;
   } 
