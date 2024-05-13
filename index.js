@@ -58,4 +58,7 @@ function animarAoScroll(){
 
 window.addEventListener('scroll', animarAoScroll);
 
-//Rolando a página de volta ao topo
+//ROLANDO A PÁGINA DE VOLTA AO TOPO
+botaoSubir.addEventListener('click', ()=> {
+    window.scrollTo(0,0);
+})
