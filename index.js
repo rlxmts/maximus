@@ -5,11 +5,13 @@ const botaoSubir = document.querySelector('.botao-subir');
 const menu = document.querySelector('.menu_navegacao');
 
 
-//ANIMAÇÃO DO MENU MOBILE AO SER CLICADO
-btMobile.addEventListener('click', ()=> {
+//ANIMAÇÃO DO MENU MOBILE AO SER CLICADO. Função animaMenu() sera reutilizada.
+btMobile.onclick = animaMenu;
+
+function animaMenu(){
     btMobile.classList.toggle('ativo');
     cabecalho.classList.toggle('fixar');
-})
+}
 
 //ALTERANDO BACKGROUND DO MENU AO ROLAR A PAGINA E TORNANDO VISIVEL BOTAO DE SUBIR AO TOPO.
 document.addEventListener('scroll', ()=> {
@@ -59,6 +61,20 @@ function animarAoScroll(){
 window.addEventListener('scroll', animarAoScroll);
 
 //ROLANDO A PÁGINA DE VOLTA AO TOPO
-botaoSubir.addEventListener('click', ()=> {
+botaoSubir.onclick = subirAoTopo;
+function subirAoTopo(){
     window.scrollTo(0,0);
+}
+
+//FECHANDO MENU AO CLICAR NOS LINKS
+
+const links = document.querySelectorAll('.link-menu');
+const inputCheck = document.getElementById('check-menu');
+links.forEach( link => {
+    link.onclick = () => {
+        if(inputCheck.checked){
+            inputCheck.checked = false;   
+            animaMenu();
+        }
+    }
 })
