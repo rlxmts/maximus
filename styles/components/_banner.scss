@@ -80,9 +80,13 @@
 
 @media screen and (max-width: 668px) {
     .banner{
+
         .container{
+            h1{
+                font-size: .8rem;
+            }
             h3{
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
         }
     }

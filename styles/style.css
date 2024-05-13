@@ -275,8 +275,11 @@
 }
 
 @media screen and (max-width: 668px) {
+  .banner .container h1 {
+    font-size: 0.8rem;
+  }
   .banner .container h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 .sobre {
@@ -563,6 +566,9 @@
     display: block;
     height: auto;
     padding-top: 4rem;
+  }
+  .contatos_info {
+    text-align: center;
   }
   .contatos_info p {
     font-size: 2.5rem;
