@@ -42,7 +42,20 @@ window.addEventListener( 'scroll', ()=> {
     posicaoAntScroll = posicaoAtualScroll;
 }); 
 
+//ADICIONANDO ANIMAÇÕES COM SCROLL
 
+const elementos = document.querySelectorAll('.anime');
 
-
+function animarAoScroll(){
+    const topJanela = window.scrollY + ((window.innerHeight * 3) / 4) ;
     
+    elementos.forEach( item =>{
+        if(topJanela > item.offsetTop){
+            item.classList.add('animar');
+        }
+    })
+}
+
+window.addEventListener('scroll', animarAoScroll);
+
+//Rolando a página de volta ao topo
