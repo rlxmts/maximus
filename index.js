@@ -21,7 +21,7 @@ document.addEventListener('scroll', ()=> {
         btWpp.classList.remove('bt-ativo');
     }
 
-    if(scrollY > 1100){
+    if(scrollY > 900){
         botaoSubir.classList.add('visivel');
     }else{
         botaoSubir.classList.remove('visivel');
