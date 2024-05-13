@@ -664,7 +664,7 @@
 }
 
 .anime {
-  transition: 0.3s;
+  transition: 0.8s;
   opacity: 0;
   transform: translateY(100px);
 }
