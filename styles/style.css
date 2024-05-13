@@ -660,4 +660,15 @@
   margin-left: 1rem;
   font-family: "Urbanist", sans-serif;
   font-style: italic;
+}
+
+.anime {
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.animar {
+  opacity: 1;
+  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */

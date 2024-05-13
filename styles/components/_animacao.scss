@@ -1,0 +1,9 @@
+.anime{
+    transition: .3s;
+     opacity: 0;
+     transform: translateY(100px);
+}
+.animar{
+    opacity: 1;
+    transform: translateY(0);
+}
