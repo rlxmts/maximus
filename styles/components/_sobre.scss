@@ -21,11 +21,10 @@
     }
     &_img{
         width: 100%;
-
         img{
             width :100%;
         }
-        .img-logo{
+        .img-container{
             margin-top: -4px;
             display: flex;
             justify-content: center;
@@ -34,8 +33,7 @@
             gap: 0;
             height: 100%;
             width: 100%;
-            background-color: variaveis.$verde-escuro;
-            
+            background-color: variaveis.$verde-escuro;            
             img{
                 width: 90px;
             }

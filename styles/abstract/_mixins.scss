@@ -29,7 +29,9 @@
     font-size: 1.2rem;
     font-family: variaveis.$font-titulos;
     color: $cor;
+    text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 600;
 }
 
 @mixin botao{
