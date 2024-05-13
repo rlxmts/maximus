@@ -1,0 +1,59 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.rodape{
+    background-color: variaveis.$verde-escuro;
+    height: 40vh;
+    @include mixins.flex();
+    align-items: center;
+
+    &_container{
+        padding: 0 2rem;
+        @include mixins.flex();
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        .botao-subir{
+            height: 30px;
+            width: 30px;
+            background-color: variaveis.$azul-escuro;
+            display: block;
+            position: fixed;
+            right: 20px;
+            bottom: 100px;
+            box-shadow: 0px 0px 2px #000;
+            transition: 1s;
+            background-image: url('../../img/seta.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 20px;
+        }
+
+        .botao-wpp{
+            @extend .botao-subir;
+            bottom: 20px;
+            height: 64px;
+            width: 64px;
+            background-image: url('../../img/wpp.png');
+            background-size: contain;
+            background-color: transparent;
+            box-shadow: none;
+            animation: none;
+        }
+
+        span{
+            @include mixins.subtitulo(white);
+            font-size: .9rem;
+            text-align: center;
+        }
+
+        .creditos{
+            color: white;
+            span{
+                font-family: variaveis.$font-credito;
+                font-size: 1.1rem;
+                font-style: italic;
+            }
+        }
+    }
+}
