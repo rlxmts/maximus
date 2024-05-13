@@ -15,3 +15,18 @@ document.addEventListener('scroll', ()=> {
         btWpp.classList.remove('bt-ativo');
     }
 })
+
+let posicaoAntScroll = window.scrollY;
+
+window.addEventListener( 'scroll', ()=> {
+
+    let posicaoAtualScroll = window.scrollY;
+    
+    if(posicaoAntScroll < posicaoAtualScroll){
+        cabecalho.classList.add('esconder');
+    }else{
+        cabecalho.classList.remove('esconder');
+    }
+
+    posicaoAntScroll = posicaoAtualScroll;
+})
