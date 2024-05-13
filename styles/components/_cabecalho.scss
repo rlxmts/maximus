@@ -25,6 +25,29 @@
     #check-menu:checked ~ .menu_navegacao{
         right: 0;
     }
+    #check-menu:checked ~ .sombra{
+        right: 0;
+        opacity: .6;
+        animation: sombra 1s;
+    }
+    @keyframes sombra {
+        0%{
+            background-color: transparent;
+        }
+        100%{
+            background-color: #000;
+        }
+    }
+    .sombra{
+        height: 100vh;
+        width: 100vw;
+        background-color: #000;
+        display: block;
+        top: 0;
+        right: -100vw;
+        position: fixed;
+        opacity: .1;
+    }
 
     label{
         display: none;

@@ -78,3 +78,13 @@ links.forEach( link => {
         }
     }
 })
+
+
+//FECHANDO MENU AO CLICAR FORA
+
+const sombra = document.querySelector('.sombra');
+
+sombra.addEventListener('click', ()=> {
+    inputCheck.checked = false;
+    animaMenu();
+})
