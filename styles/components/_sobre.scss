@@ -2,95 +2,42 @@
 @use '../abstract/mixins';
 
 .sobre {
-    @include mixins.container();
-    @include mixins.flex();
-    
-    gap: 3rem;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    align-items: center;
 
-    .container{
-        @include mixins.flex();
-        flex-direction: column;
-        align-items: start;
-        gap: 3rem;
-        div{
-            h2{
-                @include mixins.titulo(variaveis.$verde-escuro);
-            }
-            p{
-                line-height: 1.9rem;
-                font-size: 15px;
-            }
+    &_conteudo{
+        padding: 0 2rem 0 4rem;
+        max-width: 700px;
+        margin: 0 auto;
+        h2{
+            @include mixins.titulo(variaveis.$azul-escuro);
         }
-        h3{
-            @include mixins.subtitulo(variaveis.$verde-escuro);
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: -2rem;
-        }
-        ul{
-            @include mixins.flex();
-            width: 100%;
-            padding-right: 10%;
-            flex-wrap: wrap;
-            
-            li{
-                font-size: 1.5rem;
-                padding-left: 20px;
-                position: relative;
-                text-transform: capitalize;
-                margin-bottom: 1rem;
-                &::before{
-                    content: '';
-                    height: 5px;
-                    width: 5px;
-                    background-color: variaveis.$verde-escuro;
-                    display: block;
-                    position: absolute;
-                    border-radius: 50%;
-                    left: 5px;
-                    top: 10px;
-                }
-            }
-        }
-
-    }   
-    @keyframes entrada {
-        0%{
-            opacity: 0;
-            transform: translateY(100px);
-        }
-        100%{
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
+        p{
+            @include mixins.textos();
+            margin-bottom: 1rem;
+        }        
     }
-    .caixa-img{
-        display: flex;
-        justify-content: center;
+    &_img{
+        width: 100%;
+
         img{
-            width: 100%;
-            min-width: 400px;
+            width :100%;
         }
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .sobre{
-        flex-wrap: wrap-reverse;
-
-        .container{
+        .img-logo{
+            margin-top: -4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10rem;
+            gap: 0;
+            height: 100%;
+            width: 100%;
+            background-color: variaveis.$verde-escuro;
             
-            div{
-                h2{text-align: center;}
-            }
-            h3{
-                width: 100%;
-                text-align:  center;
-            }
-            ul{                
-               justify-content: space-around;
+            img{
+                width: 90px;
             }
         }
     }

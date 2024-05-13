@@ -9,15 +9,7 @@
 
         @include mixins.container();
         position: relative;    
-
-        .logo-flutuante{
-            width: 15%;
-            position: absolute;
-            top: -50px;
-            right: 100px;
-            border: none;
-        }
-
+        
         div{
             h4{
                 @include mixins.titulo(variaveis.$verde-escuro);

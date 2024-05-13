@@ -22,9 +22,11 @@
         ul{
             margin-top: 3rem;
             li{
+                margin-bottom: 1rem;
                 span{
                     @include mixins.textos();
                     color: variaveis.$cinza;
+                    font-size: 1.4rem;
                     font-weight: 500;
                 }                               
             }

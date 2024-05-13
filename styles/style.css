@@ -170,7 +170,7 @@
   font-size: 4rem;
   font-family: "DM Sans", sans-serif;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   max-width: 800px;
   font-size: 5rem;
   margin-bottom: 3rem;
@@ -223,102 +223,50 @@
 }
 
 .sobre {
-  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  align-items: center;
+}
+.sobre_conteudo {
+  padding: 0 2rem 0 4rem;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 10rem 5% 10rem 5%;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  gap: 3rem;
-  justify-content: center;
 }
-.sobre .container {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  flex-direction: column;
-  align-items: start;
-  gap: 3rem;
-}
-.sobre .container div h2 {
+.sobre_conteudo h2 {
   font-size: 4rem;
   font-family: "DM Sans", sans-serif;
-  color: #005B41;
-  font-weight: 600;
+  color: #232D3F;
+  font-weight: 500;
 }
-.sobre .container div p {
-  line-height: 1.9rem;
-  font-size: 15px;
-}
-.sobre .container h3 {
-  font-size: 1.2rem;
-  font-family: "DM Sans", sans-serif;
-  color: #005B41;
-  letter-spacing: 2px;
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: -2rem;
-}
-.sobre .container ul {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  width: 100%;
-  padding-right: 10%;
-  flex-wrap: wrap;
-}
-.sobre .container ul li {
-  font-size: 1.5rem;
-  padding-left: 20px;
-  position: relative;
-  text-transform: capitalize;
+.sobre_conteudo p {
+  font-family: "Inter", sans-serif;
+  color: #5f5f5f;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
   margin-bottom: 1rem;
 }
-.sobre .container ul li::before {
-  content: "";
-  height: 5px;
-  width: 5px;
-  background-color: #005B41;
-  display: block;
-  position: absolute;
-  border-radius: 50%;
-  left: 5px;
-  top: 10px;
+.sobre_img {
+  width: 100%;
 }
-@keyframes entrada {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.sobre_img img {
+  width: 100%;
 }
-.sobre .caixa-img {
+.sobre_img .img-logo {
+  margin-top: -4px;
   display: flex;
   justify-content: center;
-}
-.sobre .caixa-img img {
+  align-items: center;
+  padding: 10rem;
+  gap: 0;
+  height: 100%;
   width: 100%;
-  min-width: 400px;
+  background-color: #005B41;
+}
+.sobre_img .img-logo img {
+  width: 90px;
 }
 
-@media screen and (max-width: 1024px) {
-  .sobre {
-    flex-wrap: wrap-reverse;
-  }
-  .sobre .container div h2 {
-    text-align: center;
-  }
-  .sobre .container h3 {
-    width: 100%;
-    text-align: center;
-  }
-  .sobre .container ul {
-    justify-content: space-around;
-  }
-}
 .servicos {
   background-color: #f7f7f7;
 }
@@ -328,23 +276,17 @@
   padding: 10rem 5% 10rem 5%;
   position: relative;
 }
-.servicos .container .logo-flutuante {
-  width: 15%;
-  position: absolute;
-  top: -50px;
-  right: 100px;
-  border: none;
-}
 .servicos .container div h4 {
   font-size: 4rem;
   font-family: "DM Sans", sans-serif;
   color: #005B41;
-  font-weight: 600;
+  font-weight: 500;
 }
 .servicos .container div p {
   font-family: "Inter", sans-serif;
   color: #5f5f5f;
   font-size: 1.1rem;
+  line-height: 1.7rem;
   max-width: 700px;
   margin-bottom: 4rem;
 }
@@ -406,7 +348,7 @@
   font-size: 4rem;
   font-family: "DM Sans", sans-serif;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
 }
 .chamada_container a {
@@ -451,16 +393,21 @@
   font-size: 4rem;
   font-family: "DM Sans", sans-serif;
   color: #232D3F;
-  font-weight: 600;
+  font-weight: 500;
 }
 .contatos_info ul {
   margin-top: 3rem;
+}
+.contatos_info ul li {
+  margin-bottom: 1rem;
 }
 .contatos_info ul li span {
   font-family: "Inter", sans-serif;
   color: #5f5f5f;
   font-size: 1.1rem;
+  line-height: 1.7rem;
   color: #8a8a8a;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 .contatos_form {
