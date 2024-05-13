@@ -5,13 +5,14 @@
     position: fixed;
     width: 100%;
     z-index: 9999999;
-  .container{
+  &_container{
     @include mixins.container();
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     @include mixins.flex();
     justify-content: space-between;
-  } 
+    align-items: center;
+    padding: 1rem ;
+  }
+
   img{
     width: 120px;
   }
@@ -20,8 +21,17 @@
     #check-menu{
         display: none;
     }
+
+    #check-menu:checked ~ .menu_navegacao{
+        right: 0;
+    }
+
     label{
         display: none;
+        position: fixed;
+        top: 35px;
+        right: 2rem;
+        z-index: 9999;
     }
     .menu_mobile{
         @include mixins.flex();
@@ -34,7 +44,7 @@
             width: 20px;
             height: 2px;
             display: block;
-            background-color: black;
+            background-color: white;
         }
     }
         .ativo span:nth-child(1){
@@ -108,4 +118,51 @@
 .esconder{
     
     transform: translateY(-100%);
+}
+
+@media screen and (max-width: 768px) {
+    .cabecalho{
+
+        height: 80px;
+        img{
+            width: 90px;
+        }
+
+        .nav_container{
+            label{
+                display: block;
+            }
+            .menu_navegacao{
+                transition: 1s;
+                background-color: variaveis.$azul-escuro;
+                position: fixed;
+                height: 100vh;
+                width: 80vw;
+                right: -100%;
+                top: 0;
+                bottom: 0;
+                flex-direction: column;
+                justify-content: center;
+
+               ul{
+                flex-direction: column;
+
+                li{
+                    a{
+                        color: white;
+                        font-size: 1.5rem;
+                        letter-spacing: 3px;
+                        font-weight: 400;
+                    }
+                }
+               }
+               .whatsapp_bt{
+                padding: 1rem;
+                font-size: 1.2rem;
+                background-color: variaveis.$cinza-claro;
+                color: variaveis.$azul-escuro;
+               }
+            }
+        }
+    }
 }

@@ -33,3 +33,14 @@
         }
     }
 }
+
+@media screen and (max-width: 668px) {
+    .chamada{
+
+        &_container{
+            h5{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}

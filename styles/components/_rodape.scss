@@ -48,8 +48,10 @@
         }
 
         .creditos{
+            text-align: center;
             color: white;
             span{
+                margin-left: 1rem;
                 font-family: variaveis.$font-credito;
                 font-size: 1.1rem;
                 font-style: italic;

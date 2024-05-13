@@ -19,9 +19,8 @@ document.addEventListener('scroll', ()=> {
 let posicaoAntScroll = window.scrollY;
 
 window.addEventListener( 'scroll', ()=> {
-
-    let posicaoAtualScroll = window.scrollY;
     
+    let posicaoAtualScroll = window.scrollY;
     if(posicaoAntScroll < posicaoAtualScroll){
         cabecalho.classList.add('esconder');
     }else{

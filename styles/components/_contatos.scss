@@ -75,3 +75,32 @@
         background-color: variaveis.$azul-escuro;
     }
 }
+
+@media screen and (max-width:768px) {
+    .contatos{
+        display: block;
+        height: auto;
+        padding-top: 4rem;
+        &_info{
+            p{
+                font-size: 2.5rem;
+            }
+            ul{
+                text-align: center;
+                li{
+                    span{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        &_form{
+            padding: 2rem 0;
+        }
+        &_img{
+            height: 15vh;
+            background-size: 70px;
+        }
+    }
+}
