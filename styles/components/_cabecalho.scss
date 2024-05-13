@@ -119,6 +119,9 @@
     
     transform: translateY(-100%);
 }
+.fixar {
+    transform: translateY(0);
+}
 
 @media screen and (max-width: 768px) {
     .cabecalho{
@@ -163,6 +166,7 @@
                 color: variaveis.$azul-escuro;
                }
             }
+            
         }
-    }
+    }    
 }

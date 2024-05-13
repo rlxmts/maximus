@@ -135,6 +135,10 @@
   transform: translateY(-100%);
 }
 
+.fixar {
+  transform: translateY(0);
+}
+
 @media screen and (max-width: 768px) {
   .cabecalho {
     height: 80px;
