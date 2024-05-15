@@ -11,10 +11,10 @@
         margin: 0 auto;
         text-align: end;
         padding:0 2rem;
-        h3{
+        h2{
             @include mixins.subtitulo(variaveis.$verde-escuro);
         }
-        p{
+        h3{
             @include mixins.titulo(variaveis.$azul-escuro);
 
         }
@@ -83,7 +83,7 @@
         padding-top: 4rem;
         &_info{
             text-align: center;
-            p{
+            h3{
                 font-size: 2.5rem;
             }
             ul{

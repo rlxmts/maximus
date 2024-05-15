@@ -11,7 +11,11 @@
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <title>Maximos - Sevirços Especializados</title>
 </head>
+
 <body>
+
+    <a href="#principal" class="pular-navegacao">Pular para o conteúdo principal.</a>
+
     <header class="cabecalho" id="inicio">
       <div class="cabecalho_container">
         <h1>
@@ -21,7 +25,7 @@
         </h1>
         <div class="nav_container">
           <input type="checkbox" id="check-menu">
-          <label for="check-menu">
+          <label class="label-menu" for="check-menu" aria-expanded="false" aria-label="Abrir menu" role="button">
             <div class="menu_mobile">
               <span class="menubar"></span>
               <span class="menubar"></span>
@@ -41,128 +45,130 @@
         </div>
       </div>
     </header>
-    <section class="banner">
-      <div class="container">
-        <h1>Maximos Serviços Especializados:</h1>
-        <h3>Soluções adaptadas às suas necessidades.</h3>
-        <div class="container_bt">
-          <a class="bt_banner">Fale conosco</a>
-          <a class="bt_banner" href="#servicos">Serviços</a>
-        </div>      
-      </div>
-    </section>
-    <section class="sobre" id="sobre">
-      <div class="sobre_conteudo">          
-            <h2 class="anime">Sobre a Máximos:</h2>
-            <p class="anime">A Maximos: Fundada em Guarujá por um homem de notável experiência, pai dedicado de dois filhos, cuja jornada somas mais de <span>20 anos</span> no setor da segurança moldou não apenas sua expertise, mas também sua visão de mundo.</p>
-            <p class="anime">Com determinação inabalável e um coração repleto de compaixão, ele deu vida a uma empresa fundamentada em valores sólidos e um compromisso inabalável com a segurança. Além de serviços de segurança, oferecemos soluções completas, desde limpeza até rondas de moto. Cada ação é impulsionada pelo compromisso de proteger e preservar, honrando a confiança depositada em nós. Junte-se a nós nessa jornada pela paz de espírito e proteção constante.</p>                                 
-      </div>
-      <div class="sobre_img">
-        <img src="./img/sorriso.jpg" alt="">
-        <div class="img-container"><img src="./img/logo-branco.png" alt=""></div>
-      </div>
-    </section>
-    <section class="servicos" id="servicos">
-      <div class="container">
-        <div class="container_textos">
-          <h3  class="anime">Nossos Serviços</h3>
-          <h5 class="anime">Especialista em serviços operacionais.</h5>
-          <p class="anime">Além dos serviços de segurança meticulosamente planejados e executados, oferecemos um conjunto abrangente de soluções, desde serviços de limpeza até a presença vigilante de agentes de portaria e rondas de moto ágeis.</p>
+    <main role="main">
+      <section class="banner">
+        <div class="container">
+          <h1 id="principal">Maximos Serviços Especializados:</h1>
+          <h2>Soluções operacionais adaptadas às suas necessidades.</h2>
+          <div class="container_bt">
+            <a class="bt_banner">Fale conosco</a>
+            <a class="bt_banner" href="#servicos">Serviços</a>
+          </div>      
         </div>
-        <ul class="container_lista lista">
-          <li class="anime">
-            <img src="./img/camera.jpg" alt="">
-            <div>
-              <h4>Segurança Eletrônica</h4>
-              <p>
-                A segurança eletrônica oferece vantagens como monitoramento contínuo, resposta rápida a intrusos e dissuasão de invasores. Com câmeras, alarmes e cercas elétricas, você pode proteger suas propriedades, garantindo tranquilidade e segurança para suas famílias e funcionários.</p>
-            </div>
-          </li>
-          <li class="anime">
-            <img src="./img/limpeza.jpg" alt="">
-            <div>
-              <h4>Serviços de Limpeza</h4>
-              <p>
-                A limpeza profissional é essencial para manter ambientes residenciais e comerciais seguros e saudáveis. Ao contratar um serviço de limpeza, os clientes desfrutam de uma remoção eficaz de sujeira, poeira e germes, promovendo um ambiente limpo e higiênico.</p>
-            </div>
-          </li>
-          <li class="anime">
-            <img src="./img/manutencao.jpg" alt="">
-            <div>
-              <h4>Manutenção Predial</h4>
-              <p>A manutenção predial é essencial para garantir a segurança e funcionalidade de edifícios. Contratar um serviço inclui inspeções regulares e procedimentos preventivos, evitando danos e garantindo o funcionamento contínuo.</p>
-            </div>
-          </li>
-          <li class="anime">
-            <img src="./img/moto.jpg" alt="">
-            <div>
-              <h4>Vigilância motorizada</h4>
-              <p>A vigilância motorizada oferece segurança eficaz para áreas residenciais e comerciais. Com rondas regulares e resposta rápida a emergências, os clientes têm proteção contra intrusões e outras ameaças.</p>
-            </div>
-          </li>
-          <li class="anime">
-            <img src="./img/cao.jpg" alt="">
-            <div>
-              <h4>Câes de Guarda</h4>
-              <p>A utilização de cães de guarda oferece uma camada extra de segurança, sendo altamente eficaz na prevenção de invasões e detecção de intrusos. Com seu treinamento especializado e instinto protetor, esses cães oferecem uma resposta rápida a ameaças.</p>
-            </div>  
-          </li>
-          <li class="anime">
-            <img src="./img/porteiro.jpg" alt="">          
-            <div>
-              <h4>Agentes de Portaria</h4>
-              <p>Agentes de portaria são essenciais para garantir a segurança e o funcionamento adequado de condomínios e edifícios comerciais. Responsáveis pelo controle de acesso e segurança do local, eles proporcionam tranquilidade aos moradores e visitantes.</p>
-            </div>
-          </li>
-          <li class="anime">
-            <img src="./img/vigilante.jpg" alt="">          
-            <div>
-              <h4>Vigilante Patrimonial</h4>
-              <p>Vigilantes patrimoniais são essenciais para proteger propriedades contra ameaças externas. Treinados para monitorar e proteger áreas residenciais e comerciais, eles previnem crimes e intrusões, além de garantir uma resposta rápida a emergências.</p>
-            </div>
-          </li>
-          <li class="anime">
-            <img src="./img/jardinagem.jpg" alt="">          
-            <div>
-              <h4>Jardinagem</h4>
-              <p>Desfrute de um jardim impecável o ano todo. Com profissionais experientes e serviços personalizados, garantimos beleza, saúde e segurança para suas plantas. Confie na qualidade e comprometimento que nos tornam a escolha ideal para cuidar do seu espaço verde.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="chamada">
-      <div class="chamada_container">
-        <h3  class="anime" >Orçamento gratuito</h3>
-        <h5  class="anime" >Limpeza, segurança, profissionalismo, <br> Tudo em um só lugar.</h5>
-        <a class="anime" href="#">Solicitar Orçamento</a>
-      </div>
-    </section>
-    <section class="contatos" id="contatos">
-      <div class="contatos_info">
-        <h3  class="anime">Contato</h3>
-        <p  class="anime">Fale com quem é especialista em cuidar da sua empresa.</p>
-        <ul>
-          <li  class="anime">
-              <span>(13) 99716-1535</span>
-          </li>
-          <li  class="anime">
-              <span>maximosservic.espec@gmail.com</span>
-          </li>
-          <li  class="anime">
-            <span>Avenida Antenor, 595 Guarujá - SP</span>
-          </li>
-        </ul>
-      </div>
-      <form class="contatos_form">
-        <input type="text" id="nome" name="nome" placeholder="Nome" required>
-        <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
-        <input type="email" id="email" name="email" placeholder="E-mail" required>
-        <textarea name="Mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" minlength="5" maxlength="400"></textarea>
-        <button class="anime" type="submit">Enviar</button>
-      </form>
-      <div class="contatos_img"></div>
-    </section>
+      </section>
+      <section class="sobre" id="sobre">
+        <div class="sobre_conteudo">          
+              <h2 class="anime">Sobre a Máximos:</h2>
+              <p class="anime">A Maximos: Fundada em Guarujá por um homem de notável experiência, pai dedicado de dois filhos, cuja jornada somas mais de <span>20 anos</span> no setor da segurança moldou não apenas sua expertise, mas também sua visão de mundo.</p>
+              <p class="anime">Com determinação inabalável e um coração repleto de compaixão, ele deu vida a uma empresa fundamentada em valores sólidos e um compromisso inabalável com a segurança. Além de serviços de segurança, oferecemos soluções completas, desde limpeza até rondas de moto. Cada ação é impulsionada pelo compromisso de proteger e preservar, honrando a confiança depositada em nós. Junte-se a nós nessa jornada pela paz de espírito e proteção constante.</p>                                 
+        </div>
+        <div class="sobre_img">
+          <img src="./img/sorriso.jpg" alt="">
+          <div class="img-container"><img src="./img/logo-branco.png" alt=""></div>
+        </div>
+      </section>
+      <section class="servicos" id="servicos">
+        <div class="container">
+          <div class="container_textos">
+            <h2 class="anime">Nossos Serviços</h2>
+            <h3 class="anime">Especialista em serviços operacionais.</h3>
+            <p class="anime">Além dos serviços de segurança meticulosamente planejados e executados, oferecemos um conjunto abrangente de soluções, desde serviços de limpeza até a presença vigilante de agentes de portaria e rondas de moto ágeis.</p>
+          </div>
+          <ul class="container_lista lista">
+            <li class="anime">
+              <img src="./img/camera.jpg" alt="">
+              <div>
+                <h3>Segurança Eletrônica</h3>
+                <p>
+                  A segurança eletrônica oferece vantagens como monitoramento contínuo, resposta rápida a intrusos e dissuasão de invasores. Com câmeras, alarmes e cercas elétricas, você pode proteger suas propriedades, garantindo tranquilidade e segurança para suas famílias e funcionários.</p>
+              </div>
+            </li>
+            <li class="anime">
+              <img src="./img/limpeza.jpg" alt="">
+              <div>
+                <h3>Serviços de Limpeza</h3>
+                <p>
+                  A limpeza profissional é essencial para manter ambientes residenciais e comerciais seguros e saudáveis. Ao contratar um serviço de limpeza, os clientes desfrutam de uma remoção eficaz de sujeira, poeira e germes, promovendo um ambiente limpo e higiênico.</p>
+              </div>
+            </li>
+            <li class="anime">
+              <img src="./img/manutencao.jpg" alt="">
+              <div>
+                <h3>Manutenção Predial</h3>
+                <p>A manutenção predial é essencial para garantir a segurança e funcionalidade de edifícios. Contratar um serviço inclui inspeções regulares e procedimentos preventivos, evitando danos e garantindo o funcionamento contínuo.</p>
+              </div>
+            </li>
+            <li class="anime">
+              <img src="./img/moto.jpg" alt="">
+              <div>
+                <h3>Vigilância motorizada</h3>
+                <p>A vigilância motorizada oferece segurança eficaz para áreas residenciais e comerciais. Com rondas regulares e resposta rápida a emergências, os clientes têm proteção contra intrusões e outras ameaças.</p>
+              </div>
+            </li>
+            <li class="anime">
+              <img src="./img/cao.jpg" alt="">
+              <div>
+                <h3>Câes de Guarda</h3>
+                <p>A utilização de cães de guarda oferece uma camada extra de segurança, sendo altamente eficaz na prevenção de invasões e detecção de intrusos. Com seu treinamento especializado e instinto protetor, esses cães oferecem uma resposta rápida a ameaças.</p>
+              </div>  
+            </li>
+            <li class="anime">
+              <img src="./img/porteiro.jpg" alt="">          
+              <div>
+                <h3>Agentes de Portaria</h3>
+                <p>Agentes de portaria são essenciais para garantir a segurança e o funcionamento adequado de condomínios e edifícios comerciais. Responsáveis pelo controle de acesso e segurança do local, eles proporcionam tranquilidade aos moradores e visitantes.</p>
+              </div>
+            </li>
+            <li class="anime">
+              <img src="./img/vigilante.jpg" alt="">          
+              <div>
+                <h3>Vigilante Patrimonial</h3>
+                <p>Vigilantes patrimoniais são essenciais para proteger propriedades contra ameaças externas. Treinados para monitorar e proteger áreas residenciais e comerciais, eles previnem crimes e intrusões, além de garantir uma resposta rápida a emergências.</p>
+              </div>
+            </li>
+            <li class="anime">
+              <img src="./img/jardinagem.jpg" alt="">          
+              <div>
+                <h3>Jardinagem</h3>
+                <p>Desfrute de um jardim impecável o ano todo. Com profissionais experientes e serviços personalizados, garantimos beleza, saúde e segurança para suas plantas. Confie na qualidade e comprometimento que nos tornam a escolha ideal para cuidar do seu espaço verde.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="chamada">
+        <div class="chamada_container">
+          <h3  class="anime" >Orçamento gratuito</h3>
+          <h4  class="anime" >Limpeza, segurança, profissionalismo, <br> Tudo em um só lugar.</h4>
+          <a class="anime" href="#">Solicitar Orçamento</a>
+        </div>
+      </section>
+      <section class="contatos" id="contatos">
+        <div class="contatos_info">
+          <h2  class="anime">Contato</h2>
+          <h3  class="anime">Fale com quem é especialista em cuidar da sua empresa.</h3>
+          <ul>
+            <li  class="anime">
+                <span>(13) 99716-1535</span>
+            </li>
+            <li  class="anime">
+                <span>maximosservic.espec@gmail.com</span>
+            </li>
+            <li  class="anime">
+              <span>Avenida Antenor, 595 Guarujá - SP</span>
+            </li>
+          </ul>
+        </div>
+        <form class="contatos_form">
+          <input type="text" id="nome" name="nome" placeholder="Nome" required>
+          <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+          <input type="email" id="email" name="email" placeholder="E-mail" minlength="8" required>
+          <textarea name="Mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" minlength="5" maxlength="400"></textarea>
+          <button class="anime" type="submit">Enviar</button>
+        </form>
+        <div class="contatos_img"></div>
+      </section>
+    </main>
     <footer class="rodape">
       <div class="rodape_container">
         <a class="botao-subir" href="#inicio"></a>

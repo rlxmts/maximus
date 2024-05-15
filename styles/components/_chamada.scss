@@ -15,7 +15,7 @@
         h3{
             @include mixins.subtitulo(white);
         }
-        h5{
+        h4{
             @include mixins.titulo(white);
             text-align: center;
         }
@@ -38,8 +38,9 @@
     .chamada{
 
         &_container{
-            h5{
+            h4{
                 font-size: 2.5rem;
+                margin-bottom: 2rem;
             }
         }
     }

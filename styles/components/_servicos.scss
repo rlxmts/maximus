@@ -10,12 +10,12 @@
         padding-top: 180px;
 
         &_textos{
-            h3{
+            h2{
                 @include mixins.subtitulo(variaveis.$verde-escuro);
                 text-align: center;                
             }
-            h5{
-                @extend h3;
+            h3{
+                @extend h2;
                 font-size: 3.5rem;
                 color: variaveis.$azul-escuro;
                 text-transform: none;
@@ -44,7 +44,7 @@
                     border-radius: 10px;
                 }
                 div{
-                    h4{
+                    h3{
                         @include mixins.titulo(variaveis.$verde-escuro);
                         font-size: 1.5rem;
                         margin: 1.5rem 0 .5rem 0;
@@ -63,7 +63,13 @@
 @media screen and (max-width: 700px) {
     .servicos{
         .container{
-
+            padding: 5rem 5% 5rem 5%;
+            &_textos{
+                h3{
+                    font-size: 2.5rem;
+                    margin-bottom: 2rem;
+                }
+            }
 
             &_lista{
                 li{

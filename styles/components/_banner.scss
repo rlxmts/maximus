@@ -36,7 +36,7 @@
                 @include mixins.subtitulo(white);
                 animation: entrando 1s;
             }
-            h3{
+            h2{
                 @include mixins.titulo(white);
                 max-width: 800px;
                 font-size: 5rem;
@@ -85,7 +85,7 @@
             h1{
                 font-size: .8rem;
             }
-            h3{
+            h2{
                 font-size: 3rem;
             }
         }

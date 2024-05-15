@@ -12,3 +12,11 @@
     color: variaveis.$cinza;
     scroll-behavior: smooth;
 }
+
+.pular-navegacao{
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ display: block;
+ left: -100%;
+}

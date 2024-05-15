@@ -12,6 +12,14 @@
   scroll-behavior: smooth;
 }
 
+.pular-navegacao {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  display: block;
+  left: -100%;
+}
+
 .cabecalho {
   position: fixed;
   width: 100%;
@@ -246,7 +254,7 @@
   font-weight: 600;
   animation: entrando 1s;
 }
-.banner .container h3 {
+.banner .container h2 {
   font-size: 4rem;
   font-family: "DM Sans", sans-serif;
   color: white;
@@ -309,7 +317,7 @@
   .banner .container h1 {
     font-size: 0.8rem;
   }
-  .banner .container h3 {
+  .banner .container h2 {
     font-size: 3rem;
   }
 }
@@ -382,7 +390,7 @@
   padding: 10rem 5% 10rem 5%;
   padding-top: 180px;
 }
-.servicos .container_textos h3, .servicos .container_textos h5 {
+.servicos .container_textos h2, .servicos .container_textos h3 {
   font-size: 1.2rem;
   font-family: "DM Sans", sans-serif;
   color: #005B41;
@@ -391,7 +399,7 @@
   font-weight: 600;
   text-align: center;
 }
-.servicos .container_textos h5 {
+.servicos .container_textos h3 {
   font-size: 3.5rem;
   color: #232D3F;
   text-transform: none;
@@ -423,7 +431,7 @@
   width: 100%;
   border-radius: 10px;
 }
-.servicos .container_lista li div h4 {
+.servicos .container_lista li div h3 {
   font-size: 4rem;
   font-family: "DM Sans", sans-serif;
   color: #005B41;
@@ -440,6 +448,13 @@
 }
 
 @media screen and (max-width: 700px) {
+  .servicos .container {
+    padding: 5rem 5% 5rem 5%;
+  }
+  .servicos .container_textos h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
   .servicos .container_lista li {
     max-width: 100%;
     width: 100%;
@@ -468,7 +483,7 @@
   letter-spacing: 2px;
   font-weight: 600;
 }
-.chamada_container h5 {
+.chamada_container h4 {
   font-size: 4rem;
   font-family: "DM Sans", sans-serif;
   color: white;
@@ -496,8 +511,9 @@
 }
 
 @media screen and (max-width: 668px) {
-  .chamada_container h5 {
+  .chamada_container h4 {
     font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
 .contatos {
@@ -512,7 +528,7 @@
   text-align: end;
   padding: 0 2rem;
 }
-.contatos_info h3 {
+.contatos_info h2 {
   font-size: 1.2rem;
   font-family: "DM Sans", sans-serif;
   color: #005B41;
@@ -520,7 +536,7 @@
   letter-spacing: 2px;
   font-weight: 600;
 }
-.contatos_info p {
+.contatos_info h3 {
   font-size: 4rem;
   font-family: "DM Sans", sans-serif;
   color: #232D3F;
@@ -601,7 +617,7 @@
   .contatos_info {
     text-align: center;
   }
-  .contatos_info p {
+  .contatos_info h3 {
     font-size: 2.5rem;
   }
   .contatos_info ul {

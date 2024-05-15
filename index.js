@@ -3,10 +3,19 @@ const cabecalho = document.querySelector('.cabecalho');
 const btWpp = document.querySelector('.whatsapp_bt');
 const botaoSubir = document.querySelector('.botao-subir');
 const menu = document.querySelector('.menu_navegacao');
+const labelMenu = document.querySelector('.label-menu');
 
-
-//ANIMAÇÃO DO MENU MOBILE AO SER CLICADO. Função animaMenu() sera reutilizada.
-btMobile.onclick = animaMenu;
+// //ANIMAÇÃO DO MENU MOBILE AO SER CLICADO. Função animaMenu() sera reutilizada.
+btMobile.addEventListener('click', ()=> {
+    animaMenu();
+    const ativo = btMobile.classList.contains('ativo');
+    labelMenu.setAttribute('aria-expanded', ativo);
+    if(ativo){
+        labelMenu.setAttribute('aria-label', 'Fechar menu');
+    }else{
+        labelMenu.setAttribute('aria-label', 'Abrir menu');
+    }
+})
 
 function animaMenu(){
     btMobile.classList.toggle('ativo');
