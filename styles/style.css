@@ -660,14 +660,14 @@
   flex-direction: column;
 }
 .rodape_container .botao-subir, .rodape_container .botao-wpp {
-  height: 0px;
   width: 0px;
+  height: 30px;
   background-color: #232D3F;
   position: fixed;
   right: 20px;
   bottom: 100px;
   border-radius: 3px;
-  transition: 0.5s;
+  transition: 0.3s;
   background-image: url("../../img/seta.png");
   background-position: center;
   background-repeat: no-repeat;

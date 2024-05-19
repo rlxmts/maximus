@@ -14,14 +14,14 @@
         justify-content: center;
         flex-direction: column;
         .botao-subir{
-            height: 0px;
             width: 0px;
+            height: 30px;
             background-color: variaveis.$azul-escuro;
             position: fixed;
             right: 20px;
             bottom: 100px;
             border-radius: 3px;
-            transition: .5s;
+            transition: .3s;
             background-image: url('../../img/seta.png');
             background-position: center;
             background-repeat: no-repeat;
