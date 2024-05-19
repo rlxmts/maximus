@@ -662,6 +662,7 @@
   flex-direction: column;
 }
 .rodape_container .botao-subir, .rodape_container .botao-wpp {
+  color: rgba(0, 0, 0, 0);
   width: 0px;
   height: 30px;
   background-color: #232D3F;
