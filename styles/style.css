@@ -572,6 +572,7 @@
 }
 .contatos_form label {
   color: black;
+  font-size: 1.5rem;
   opacity: 0;
   position: absolute;
   display: block;
@@ -690,6 +691,7 @@
   animation: none;
   display: block;
   opacity: 1;
+  color: rgba(0, 0, 0, 0);
 }
 .rodape_container span {
   font-size: 1.2rem;
