@@ -571,6 +571,7 @@
   position: relative;
 }
 .contatos_form label {
+  color: black;
   opacity: 0;
   position: absolute;
   display: block;
