@@ -25,7 +25,7 @@
         </h1>
         <div class="nav_container">
           <input type="checkbox" id="check-menu">
-          <label class="label-menu" for="check-menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu" role="button">
+          <label class="label-menu" for="check-menu" aria-haspopup="true" aria-expanded="false" aria-label="Abrir menu">
             <div class="menu_mobile">
               <span class="menubar"></span>
               <span class="menubar"></span>
@@ -33,7 +33,7 @@
             </div>
           </label>
           <div class="sombra"></div>
-          <nav class="menu_navegacao" id="menu" role="menu">
+          <nav class="menu_navegacao" id="menu">
               <ul>
                   <li><a class="link-menu" href="#" onclick="subirAoTopo()">Início</a></li>
                   <li><a class="link-menu" href="#sobre">Sobre</a></li>
@@ -162,11 +162,11 @@
         </div>
         <form class="contatos_form">
           <label for="nome">Nome completo</label>
-          <input type="text" id="nome" placeholder="Nome" required>
+          <input type="text" id="nome" placeholder="Nome" required="true">
           <label for="telefone">Telefone com ddd</label>
-          <input type="tel" id="telefone" placeholder="Telefone" required>
+          <input type="tel" id="telefone" placeholder="Telefone" required="true">
           <label for="email">E-mail</label>
-          <input type="email" id="email" placeholder="E-mail" minlength="8" required>
+          <input type="email" id="email" placeholder="E-mail" minlength="8" required="true">
           <label for="mensagem">Deixe sua mensagem para nós.</label>
           <textarea id="mensagem" placeholder="Digite sua mensagem aqui" minlength="5" maxlength="400"></textarea>
           <button class="anime" type="submit">Enviar</button>
