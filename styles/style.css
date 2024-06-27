@@ -705,13 +705,14 @@
   text-align: center;
 }
 .rodape_container .creditos {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
   text-align: center;
   color: white;
 }
-.rodape_container .creditos span {
-  margin-left: 1rem;
-  font-family: "Urbanist", sans-serif;
-  font-style: italic;
+.rodape_container .creditos img {
+  width: 100px;
 }
 
 .anime {

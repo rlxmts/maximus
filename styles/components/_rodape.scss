@@ -56,12 +56,11 @@
         }
 
         .creditos{
+            @include mixins.flex();
             text-align: center;
             color: white;
-            span{
-                margin-left: 1rem;
-                font-family: variaveis.$font-credito;
-                font-style: italic;
+            img{
+                width: 100px;
             }
         }
     }
