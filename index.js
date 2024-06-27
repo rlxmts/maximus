@@ -10,11 +10,7 @@ btMobile.addEventListener('click', ()=> {
     animaMenu();
     const ativo = btMobile.classList.contains('ativo');
     labelMenu.setAttribute('aria-expanded', ativo);
-    if(ativo){
-        labelMenu.setAttribute('aria-label', 'Fechar menu');
-    }else{
-        labelMenu.setAttribute('aria-label', 'Abrir menu');
-    }
+    ativo ? labelMenu.setAttribute('aria-label', 'Fechar menu') : labelMenu.setAttribute('aria-label', 'Abrir menu');
 })
 
 function animaMenu(){
@@ -22,8 +18,7 @@ function animaMenu(){
     cabecalho.classList.toggle('fixar');
 }
 
-//ALTERANDO BACKGROUND DO MENU AO ROLAR A PAGINA E TORNANDO VISIVEL BOTAO DE SUBIR AO TOPO.
-document.addEventListener('scroll', ()=> {
+function ativeEstiloMenu(){
     if(scrollY > 10){
         cabecalho.classList.add('cabecalho-ativo');
         btWpp.classList.add('bt-ativo');
@@ -31,52 +26,35 @@ document.addEventListener('scroll', ()=> {
         cabecalho.classList.remove('cabecalho-ativo');
         btWpp.classList.remove('bt-ativo');
     }
+}
 
-    if(scrollY > 900){
-        botaoSubir.classList.add('visivel');
-    }else{
-        botaoSubir.classList.remove('visivel');
-    }
-})
-
-// TORNANDO O MENU RETRATIL, ESCONDE AO ROLAR PARA BAIXO, MOSTRAR AO ROLAR PARA CIMA
 let posicaoAntScroll = window.scrollY;
-window.addEventListener( 'scroll', ()=> {
-    
+function menuRetratil(){
     let posicaoAtualScroll = window.scrollY;
-    if(posicaoAntScroll < posicaoAtualScroll){
-        cabecalho.classList.add('esconder');
-    }else{
-        cabecalho.classList.remove('esconder');
-    }
-
+    posicaoAntScroll < posicaoAtualScroll ? cabecalho.classList.add('esconder') : cabecalho.classList.remove('esconder');
     posicaoAntScroll = posicaoAtualScroll;
-}); 
+}
 
-//ADICIONANDO ANIMAÇÕES COM SCROLL
 
 const elementos = document.querySelectorAll('.anime');
-
 function animarAoScroll(){
-    const topJanela = window.scrollY + ((window.innerHeight * 3) / 4) ;
-    
+    const topJanela = window.scrollY + ((window.innerHeight * 3) / 4) ;    
     elementos.forEach( item =>{
-        if(topJanela > item.offsetTop){
-            item.classList.add('animar');
-        }
+        topJanela > item.offsetTop ? item.classList.add('animar') : '';
     })
 }
 
-window.addEventListener('scroll', animarAoScroll);
+window.addEventListener('scroll',()=>{
+    animarAoScroll();
+    menuRetratil();
+    ativeEstiloMenu();
+    scrollY > 900 ? botaoSubir.classList.add('visivel') : botaoSubir.classList.remove('visivel');
+});
 
 //ROLANDO A PÁGINA DE VOLTA AO TOPO
-botaoSubir.onclick = subirAoTopo;
-function subirAoTopo(){
-    window.scrollTo(0,0);
-}
+botaoSubir.onclick = ()=> window.scrollTo(0,0);
 
 //FECHANDO MENU AO CLICAR NOS LINKS
-
 const links = document.querySelectorAll('.link-menu');
 const inputCheck = document.getElementById('check-menu');
 links.forEach( link => {
@@ -88,12 +66,9 @@ links.forEach( link => {
     }
 })
 
-
 //FECHANDO MENU AO CLICAR FORA
-
 const sombra = document.querySelector('.sombra');
-
-sombra.addEventListener('click', ()=> {
+sombra.onclick = ()=> {
     inputCheck.checked = false;
     animaMenu();
-})
+}
